@@ -1,0 +1,40 @@
+//SPDX-License-Identifier: MIT
+
+// Warning: Do not use for actual funds.
+
+pragma solidity ^0.8.9;
+
+contract Blackjack {
+    // Blackjack parameters
+    Person[] public people;
+
+    struct Person {
+        string Player1;
+    }
+
+    function addPlayer(string memory Player1) public {
+        people.push()
+    }
+
+
+//Pre game
+    // launch contract
+    // eth deposit einzahlen können
+    // state variables --> timesstamp, betamount, adressen
+    // comments zu den variablen
+    // anzahl spieler
+    // andere verträge anschauen
+    // max bet --> fix bet? minimum bet
+    // eth reingeben --> doppelt so viel eth zurückgeben wie?
+    // amount den du reintust
+    // bets insgesamt limitieren
+
+// Post game
+// Gewinnverteilung --> Gewinner gewinnt das geld (Gewinnbeteilung nur mit Token)
+// Gewinnbeteiligung --> wenn dealer gewinnt
+// Spiel zu ende --> gameend
+// Wiederholung zu Start
+
+
+
+    // State of Blackjack
