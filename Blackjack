@@ -5,17 +5,43 @@
 pragma solidity ^0.8.9;
 
 contract Blackjack {
-    // Blackjack parameters
-    Person[] public people;
+    address public dealer;
+    uint256 public minBet = 0.01 ether;
+    uint256 public maxBet = 100 ether;
+    
+    address public player;
 
-    struct Person {
-        string Player1;
+    // Storing players bet
+    struct Player {
+        uint amountofbet;
+    }
+    
+    // simple mapping in storage
+    mapping(address => uint256) public betofplayer;
+
     }
 
-    function addPlayer(string memory Player1) public {
-        people.push()
+
+
+    // Pre game
+    // sending ether from address to smart contract
+    // function bet() external payable {
+        if(msg.value < 1000){
+            revert();
+        }
+    }
+    // check the bet of player
+    // function check_bet() external view returns(uint) {
+    //   return address(this).balance;
     }
 
+    // Store the bet
+
+    // Post game
+    // trasnfer 1 ether from smart contract to player
+    // function payout(address payable recipient) external {
+    //    recipient.transfer(1 ether)
+    }
 
 //Pre game
     // launch contract
@@ -34,7 +60,3 @@ contract Blackjack {
 // Gewinnbeteiligung --> wenn dealer gewinnt
 // Spiel zu ende --> gameend
 // Wiederholung zu Start
-
-
-
-    // State of Blackjack
